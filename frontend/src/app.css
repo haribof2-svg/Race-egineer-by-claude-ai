@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ── */
+* { box-sizing: border-box; }
+
+html, body {
+  @apply bg-f1-bg text-f1-text font-f1;
+  font-size: 14px;
+  line-height: 1.4;
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a #111;
+}
+
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+
+/* ── Gold accent border-left on cards ── */
+.card {
+  @apply bg-f1-card border border-f1-border rounded-sm;
+}
+.card-gold {
+  @apply card border-l-2 border-l-f1-gold;
+}
+
+/* ── Timing table ── */
+.timing-table {
+  @apply w-full text-sm font-mono;
+  border-collapse: collapse;
+}
+.timing-table th {
+  @apply text-f1-muted text-xs font-semibold tracking-widest uppercase px-3 py-2 text-left;
+  border-bottom: 1px solid #2a2a2a;
+}
+.timing-table td {
+  @apply px-3 py-1.5 border-b border-f1-border/50;
+}
+.timing-table tr:hover td { background: rgba(255,255,255,0.03); }
+.timing-table tr.our-bike td {
+  background: rgba(232,184,0,0.08);
+  border-left: 2px solid #e8b800;
+}
+.timing-table tr.pit-in td  { background: rgba(232,0,26,0.06); }
+.timing-table tr.pit-out td { background: rgba(0,215,135,0.06); }
+
+/* ── Metric card ── */
+.metric {
+  @apply card-gold px-4 py-3 flex flex-col gap-0.5;
+}
+.metric-label { @apply text-f1-muted text-xs uppercase tracking-widest; }
+.metric-value { @apply text-2xl font-bold tracking-tight; }
+.metric-delta { @apply text-xs font-mono; }
+
+/* ── Status badge ── */
+.badge {
+  @apply inline-flex items-center gap-1.5 px-2 py-0.5 text-xs font-semibold tracking-wide rounded-sm uppercase;
+}
+.badge-green  { @apply bg-f1-green/15  text-f1-green  border border-f1-green/30; }
+.badge-red    { @apply bg-f1-red/15    text-f1-red    border border-f1-red/30; }
+.badge-gold   { @apply bg-f1-gold/15   text-f1-gold   border border-f1-gold/30; }
+.badge-muted  { @apply bg-white/5      text-f1-sub    border border-f1-border; }
+
+/* ── Gain / loss colors ── */
+.gain   { @apply text-f1-green font-semibold; }
+.loss   { @apply text-f1-red font-semibold; }
+.neutral { @apply text-f1-muted; }
+
+/* ── Section title ── */
+.section-title {
+  @apply text-xs font-semibold tracking-widest uppercase text-f1-muted mb-3;
+}
+
+/* ── Progress bar ── */
+.progress-bar {
+  @apply h-1 bg-f1-border rounded-full overflow-hidden;
+}
+.progress-bar-fill {
+  @apply h-full bg-f1-gold rounded-full transition-all duration-500;
+}
+
+/* ── Slider custom ── */
+input[type=range] {
+  @apply w-full accent-f1-gold cursor-pointer;
+}
+
+/* ── Button ── */
+.btn {
+  @apply px-4 py-2 text-sm font-semibold tracking-wide transition-all duration-150 rounded-sm cursor-pointer border;
+}
+.btn-primary {
+  @apply btn bg-f1-gold text-black border-f1-gold hover:bg-f1-gold/80;
+}
+.btn-ghost {
+  @apply btn bg-transparent text-f1-sub border-f1-border hover:border-f1-gold hover:text-f1-gold;
+}
+.btn-danger {
+  @apply btn bg-f1-red/10 text-f1-red border-f1-red/30 hover:bg-f1-red/20;
+}
+
+/* ── Nav item ── */
+.nav-item {
+  @apply flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-f1-sub
+         transition-all duration-100 cursor-pointer border-l-2 border-transparent
+         hover:text-f1-text hover:bg-white/5;
+}
+.nav-item.active {
+ @apply text-f1-gold border-l-f1-gold;
+background-color: rgba(212, 175, 55, 0.08);
+}
+
+/* ── Sector time colors ── */
+.sector-purple { color: #9b00e8; }
+.sector-green  { color: #00d787; }
+.sector-white  { color: #f0f0f0; }
