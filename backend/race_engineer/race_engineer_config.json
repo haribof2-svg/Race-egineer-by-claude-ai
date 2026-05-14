@@ -1,0 +1,64 @@
+{
+  "team_name": "LEGACY COMPETITION",
+  "our_bike_number": "96",
+  "our_category": "PRD",
+  "live_url": "https://fimewc.live-frclassification.fr/r1.json",
+  "auto_refresh": true,
+  "refresh_interval": 3,
+  "pilots": [
+    {
+      "name": "Manneveau Jordy ",
+      "alias": [
+        "Jordy"
+      ],
+      "color": "#3955e6",
+      "order": 1,
+      "active": true
+    },
+    {
+      "name": "Gelas Pierre",
+      "alias": [
+        "Pierre"
+      ],
+      "color": "#fff600",
+      "order": 2,
+      "active": true
+    },
+    {
+      "name": "Hauser Ludovic",
+      "alias": [
+        "Ludo"
+      ],
+      "color": "#ff0004",
+      "order": 3,
+      "active": true
+    },
+    {
+      "name": "Pilote 4",
+      "alias": [],
+      "color": "#f4a261",
+      "order": 4,
+      "active": false
+    }
+  ],
+  "fuel": {
+    "tank_capacity_l": 16,
+    "consumption_l_per_lap": 0.95,
+    "safety_margin_laps": 1,
+    "refuel_amount_l": 16
+  },
+  "tires": {
+    "tracking_enabled": false,
+    "wear_per_lap_pct": 1.5,
+    "performance_impact_pct_per_pct_wear": 0.05
+  },
+  "competitors": {
+    "default_category": "PRD",
+    "favorites": [],
+    "main_comparison": ""
+  },
+  "export": {
+    "auto_export": false,
+    "export_path": "exports/"
+  }
+}
